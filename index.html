@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Silvana Caroli | Caroli Imóveis — Imobiliária em Araçatuba-SP</title>
+<meta name="description" content="Corretora de imóveis de médio e alto padrão em Araçatuba-SP. Mais de 15 anos de experiência, atendimento 100% personalizado, do primeiro contato à entrega das chaves.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://corretorasilvanacaroli.com.br/">
+<link rel="icon" type="image/webp" href="assets/sc-logo.webp">
+
+<!-- Open Graph / compartilhamento (WhatsApp, Instagram, Facebook) -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Caroli Imóveis">
+<meta property="og:title" content="Silvana Caroli | Caroli Imóveis — Imobiliária em Araçatuba-SP">
+<meta property="og:description" content="Corretora de imóveis de médio e alto padrão em Araçatuba-SP. Mais de 15 anos de experiência, atendimento 100% personalizado, do primeiro contato à entrega das chaves.">
+<meta property="og:image" content="https://corretorasilvanacaroli.com.br/assets/silvana-hero.webp">
+<meta property="og:url" content="https://corretorasilvanacaroli.com.br/">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Silvana Caroli | Caroli Imóveis — Imobiliária em Araçatuba-SP">
+<meta name="twitter:description" content="Corretora de imóveis de médio e alto padrão em Araçatuba-SP. Mais de 15 anos de experiência, atendimento 100% personalizado, do primeiro contato à entrega das chaves.">
+<meta name="twitter:image" content="https://corretorasilvanacaroli.com.br/assets/silvana-hero.webp">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "Silvana Caroli | Caroli Imóveis",
+  "image": "https://corretorasilvanacaroli.com.br/assets/silvana-hero.webp",
+  "url": "https://corretorasilvanacaroli.com.br/",
+  "telephone": "+5518997715724",
+  "priceRange": "$$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Brasília, 2121, Sala 1818 - New York Tower",
+    "addressLocality": "Araçatuba",
+    "addressRegion": "SP",
+    "postalCode": "16018-000",
+    "addressCountry": "BR"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Araçatuba"
+  }
+}
+</script>
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: #ffffff; }
+  ::selection { background: #c4101b; color: #fff; }
+  .car-root { --serif: 'Playfair Display', Georgia, serif; --sans: 'Archivo', system-ui, sans-serif; }
+  .car-btn { transition: transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease; will-change: transform; }
+  .car-btn:hover { transform: translateY(-2px); }
+  .car-btn-primary:hover { background: #a50d16 !important; }
+  .car-btn-white:hover { background: #fff5f5 !important; }
+  .car-fab:hover { transform: scale(1.08); }
+  .car-card { transition: transform .3s cubic-bezier(.2,.7,.2,1), box-shadow .3s ease, border-color .3s ease; }
+  .car-card:hover { transform: translateY(-6px); box-shadow: 0 26px 50px -26px rgba(196,16,27,.4); border-color: #c4101b !important; }
+  .car-chip { transition: background .25s ease, color .25s ease, border-color .25s ease, transform .25s ease; }
+  .car-chip:hover { background: #c4101b !important; color: #fff !important; border-color: #c4101b !important; transform: translateY(-3px); }
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+  @keyframes carFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+  @keyframes carFloat2 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(7px); } }
+  @keyframes carPulse { 0% { transform: scale(1); opacity: .55; } 70% { transform: scale(1.4); opacity: 0; } 100% { opacity: 0; } }
+  @keyframes carSheen { 0% { transform: translateX(-140%) skewX(-18deg); } 55%,100% { transform: translateX(360%) skewX(-18deg); } }
+  .car-sheen-wrap { position: relative; overflow: hidden; }
+  .car-sheen { position: absolute; top: 0; bottom: 0; width: 36%; pointer-events: none; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); animation: carSheen 4.8s ease-in-out infinite; }
+  .car-balloon { animation: carFloat 5s ease-in-out infinite; }
+  .car-balloon.b2 { animation: carFloat2 6s ease-in-out infinite; }
+  @media (prefers-reduced-motion: reduce) { .car-sheen { animation: none !important; } }
+  .car-rail { display: flex; gap: 22px; overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none; padding: 6px 8px 12px; }
+  .car-rail::-webkit-scrollbar { display: none; }
+  .car-rcard { flex: 0 0 calc((100% - 44px) / 3); width: calc((100% - 44px) / 3); min-width: 0; }
+  @media (max-width: 760px) {
+    .car-rail { margin: 0 !important; gap: 16px; scroll-snap-type: x mandatory; padding-left: 7%; padding-right: 7%; }
+    .car-rcard { flex: 0 0 86% !important; width: 86% !important; scroll-snap-align: center; }
+    .car-arrow { display: none !important; }
+  }
+  .car-arrow { transition: background .25s ease, color .25s ease, transform .25s ease, box-shadow .25s ease; }
+  .car-arrow:hover { background: #c4101b !important; color: #fff !important; transform: translateY(-50%) scale(1.06); }
+  .car-step-num { position: relative; transition: transform .35s cubic-bezier(.2,.7,.2,1); }
+  .car-step-num::after { content: ''; position: absolute; inset: -7px; border-radius: 50%; border: 2px solid rgba(196,16,27,.4); animation: carPulse 2.6s ease-out infinite; pointer-events: none; }
+  .car-step:hover .car-step-num { transform: translateY(-5px); }
+  @media (max-width: 880px) {
+    .car-hero-grid { grid-template-columns: 1fr !important; min-height: 0 !important; gap: 8px !important; padding-left: 20px !important; padding-right: 20px !important; }
+    .car-hero-media { min-height: 320px !important; }
+    .car-two-col { grid-template-columns: 1fr !important; gap: 36px !important; }
+    .car-contact-grid { grid-template-columns: 1fr !important; }
+    .car-bene-grid { grid-template-columns: 1fr !important; }
+    .car-imo-grid { grid-template-columns: 1fr !important; }
+    .car-tl-line { display: none !important; }
+    /* Hero: foto acima do título no mobile */
+    .car-hero-text { order: 2; padding: 0 0 56px !important; margin-top: -30px !important; position: relative; z-index: 4; text-align: center; }
+    .car-hero-ctas { justify-content: center; }
+    .car-hero-photo { order: 1; min-height: 400px !important; margin: 28px 0 0 !important; }
+    /* Blocos de texto que eram a coluna esquerda de um layout 2 colunas (foto/mapa
+       ao lado) ficam centralizados ao empilhar em 1 coluna no mobile — senão o
+       texto sobra alinhado à esquerda sob um elemento que agora é full-width. */
+    .car-mobile-center { text-align: center; }
+    /* No bloco "Quem é Silvana Caroli", só o pré-título, título e botão ficam
+       centralizados no mobile — os parágrafos continuam alinhados à esquerda. */
+    #sobre p { text-align: left; }
+    .car-chips-row { justify-content: center; margin-left: auto; margin-right: auto; }
+    .car-hero-frame { inset: 0 !important; -webkit-mask-image: linear-gradient(to bottom, #000 62%, rgba(0,0,0,0) 96%); mask-image: linear-gradient(to bottom, #000 62%, rgba(0,0,0,0) 96%); }
+    .car-hero-img { top: 0 !important; left: 50% !important; height: 100% !important; width: auto !important; max-width: none !important; transform: translateX(-50%) !important; object-position: top center !important; }
+    .car-hero-logo { top: 10px !important; left: 10px !important; width: 68px !important; height: 68px !important; }
+    .car-hero-logo img { width: 40px !important; height: 40px !important; }
+    .car-badge-exp { top: 10px !important; right: 10px !important; left: auto !important; bottom: auto !important; font-size: 12px !important; padding: 8px 12px !important; }
+    .car-badge-aten { bottom: 52px !important; left: 10px !important; right: auto !important; top: auto !important; font-size: 12px !important; padding: 8px 12px !important; }
+    .car-h1 { font-size: 34px !important; }
+    .car-sec-title { font-size: 32px !important; }
+    /* Espaçamento vertical mais enxuto no mobile */
+    #beneficios, #imoveis, #depoimentos, #atuacao, #atendimento { padding: 64px 0 !important; }
+    #sobre, #contato { padding: 72px 0 !important; }
+    /* Timeline vertical */
+    .car-step { text-align: left !important; position: relative; padding-left: 92px; min-height: 70px; }
+    .car-step .car-step-num { margin: 0 !important; position: absolute; left: 0; top: 0; }
+    .car-step > div { margin-left: 0 !important; margin-right: 0 !important; max-width: none !important; }
+    .car-step:not(:last-child)::before { content: ''; position: absolute; left: 35px; top: 35px; height: calc(100% + 71px); width: 2px; background: rgba(196,16,27,.35); transform: translateX(-50%); z-index: 0; }
+    /* Balões dentro da foto no mobile */
+    .car-balloon:not(.b2) { right: 10px !important; left: auto !important; }
+    .car-balloon.b2 { left: 10px !important; right: auto !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="car-root" style="font-family: var(--sans); color: #1b1814; background: #ffffff; overflow-x: hidden; line-height: 1.5;">
+
+  <div style="height: 4px; background: #c4101b;"></div>
+
+  <!-- ===== HERO ===== -->
+  <section id="topo" style="background-color: #ffffff; background-image: url('assets/hero-bg.webp'); background-size: cover; background-position: center center; background-repeat: no-repeat; color: #1b1814;">
+    <div class="car-hero-grid" style="max-width: 1240px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 56px; align-items: center; min-height: 80vh">
+      <div class="car-hero-text" style="padding: 80px 0;">
+        <div style="display: inline-flex; align-items: center; gap: 10px; font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; color: #c4101b; font-weight: 600; margin-bottom: 26px;">
+          Araçatuba-SP · Médio e alto padrão
+        </div>
+        <h1 class="car-h1" style="font-family: var(--serif); font-weight: 500; font-size: 46px; line-height: 1.07; letter-spacing: -0.5px; margin-bottom: 24px; color: #1b1814;">
+          <span style="color: #c4101b;">Silvana Caroli:</span> Corretora de Imóveis de Médio e Alto Padrão em Araçatuba-SP
+        </h1>
+        <p style="font-size: 18px; color: #534c43; max-width: 540px; margin-bottom: 34px; line-height: 1.6;">
+          Mais de 15 anos ajudando famílias a encontrar o imóvel certo, com atendimento 100% personalizado, do primeiro contato à entrega das chaves.
+        </p>
+        <div class="car-hero-ctas" style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center;">
+          <a class="car-btn car-btn-primary" href="https://wa.me/5518997715724?text=Ol%C3%A1%20Silvana!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20im%C3%B3veis%20dispon%C3%ADveis." target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; background: #c4101b; color: #fff; text-decoration: none; padding: 16px 28px; border-radius: 999px; font-size: 15px; font-weight: 600; box-shadow: 0 14px 34px -10px rgba(196,16,27,0.5);">
+            Falar com Silvana no WhatsApp →
+          </a>
+          <a class="car-btn" href="#imoveis" style="display: inline-flex; align-items: center; gap: 8px; color: #1b1814; text-decoration: none; padding: 16px 20px; font-size: 15px; font-weight: 600; border-bottom: 1px solid #1b1814;">
+            Ver tipos de imóveis
+          </a>
+        </div>
+        <div style="font-size: 13px; color: #8a8175; margin-top: 18px; letter-spacing: 0.3px;">Caroli Imóveis · Imobiliária em Araçatuba-SP</div>
+      </div>
+      <div class="car-hero-photo" style="position: relative; align-self: stretch; min-height: 480px; margin: 0; display: flex; align-items: flex-end; justify-content: center;">
+        <div class="car-hero-frame" style="position: absolute; inset: 0; z-index: 2; overflow: hidden;">
+          <img class="car-hero-img" src="assets/silvana-hero.webp" width="1200" height="1969" fetchpriority="high" decoding="async" alt="Silvana Caroli, corretora de imóveis de médio e alto padrão em Araçatuba-SP" style="position: absolute; bottom: 0; left: 213px; transform: translateX(-50%) scale(1.24); transform-origin: bottom center; height: 594px; width: 342px; max-width: 130%; object-fit: contain; object-position: bottom; filter: drop-shadow(20px 14px 20px rgba(27,24,20,0.22))">
+        </div>
+
+        <!-- selo com a logo SC (atrás do ombro) -->
+        <div class="car-sheen-wrap car-hero-logo" style="position: absolute; z-index: 1; top: 168px; left: 6px; width: 104px; height: 104px; border-radius: 50%; background: #fff; box-shadow: 0 14px 30px -12px rgba(27,24,20,0.28); display: flex; align-items: center; justify-content: center">
+          <span style="position: absolute; inset: 7px; border: 1px solid rgba(196,16,27,0.25); border-radius: 50%;"></span>
+          <img src="assets/sc-logo.webp" width="280" height="280" loading="lazy" decoding="async" alt="Logotipo Silvana Caroli" style="width: 62px; height: 62px; object-fit: contain;">
+          <span class="car-sheen"></span>
+        </div>
+
+        <!-- balão: experiência (atrás do ombro) -->
+        <div class="car-sheen-wrap car-badge-exp" style="position: absolute; z-index: 3; top: 48%; right: 8%; display: flex; align-items: center; gap: 9px; background: rgba(196,16,27,0.60); backdrop-filter: blur(9px); -webkit-backdrop-filter: blur(9px); border: 1px solid rgba(255,255,255,0.28); color: #fff; padding: 10px 16px; border-radius: 999px; box-shadow: 0 16px 36px -18px rgba(196,16,27,0.6); font-size: 13.5px; font-weight: 600;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.4 5.2L20 8l-4 4 1 6-5-2.8L7 18l1-6-4-4 5.6-.8z"></path></svg>
+          +15 anos de experiência
+          <span class="car-sheen"></span>
+        </div>
+
+        <!-- balão: atendimento (à frente) -->
+        <div class="car-sheen-wrap car-badge-aten" style="position: absolute; z-index: 3; bottom: 16%; left: -3%; display: flex; align-items: center; gap: 9px; background: rgba(196,16,27,0.60); backdrop-filter: blur(9px); -webkit-backdrop-filter: blur(9px); border: 1px solid rgba(255,255,255,0.28); color: #fff; padding: 10px 16px; border-radius: 999px; box-shadow: 0 16px 36px -18px rgba(196,16,27,0.6); font-size: 13.5px; font-weight: 600;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"></path></svg>
+          Atendimento personalizado
+          <span class="car-sheen"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BENEFÍCIOS ===== -->
+  <section id="beneficios" style="background: #faf8f4; background-image: radial-gradient(rgba(27,24,20,0.045) 1.2px, transparent 1.2px); background-size: 22px 22px; padding: 100px 0; border-top: 1px solid #ece7df;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
+      <div data-reveal style="margin-bottom: 52px;">
+        <div style="font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; color: #c4101b; font-weight: 600; margin-bottom: 16px;">DIFERENCIAIS</div>
+        <h2 class="car-sec-title" style="font-family: var(--serif); font-weight: 500; font-size: 52px; line-height: 1.05; max-width: 850px;">Por que escolher a <span style="color: #c4101b;">Caroli Imóveis</span></h2>
+      </div>
+      <div class="car-bene-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+
+        <div class="car-card" data-reveal style="background: #fff; border: 1px solid #ece7df; border-radius: 12px; padding: 34px 30px;">
+          <div style="width: 48px; height: 48px; border-radius: 12px; background: #c4101b; color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 24px; font-weight: 600; margin-bottom: 20px;">01</div>
+          <div style="font-size: 19px; font-weight: 600; margin-bottom: 10px; letter-spacing: -0.2px; color: #C4101B">Curadoria criteriosa</div>
+          <div style="font-size: 15px; color: #6b6660; line-height: 1.6;">Só apresento empreendimentos de construtoras sólidas e confiáveis.</div>
+        </div>
+
+        <div class="car-card" data-reveal style="background: #fff; border: 1px solid #ece7df; border-radius: 12px; padding: 34px 30px;">
+          <div style="width: 48px; height: 48px; border-radius: 12px; background: #c4101b; color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 24px; font-weight: 600; margin-bottom: 20px;">02</div>
+          <div style="font-size: 19px; font-weight: 600; margin-bottom: 10px; letter-spacing: -0.2px; color: #C4101B">Atendimento personalizado</div>
+          <div style="font-size: 15px; color: #6b6660; line-height: 1.6;">Você fala direto comigo ou com a minha equipe, sempre.</div>
+        </div>
+
+        <div class="car-card" data-reveal style="background: #fff; border: 1px solid #ece7df; border-radius: 12px; padding: 34px 30px;">
+          <div style="width: 48px; height: 48px; border-radius: 12px; background: #c4101b; color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 24px; font-weight: 600; margin-bottom: 20px;">03</div>
+          <div style="font-size: 19px; font-weight: 600; margin-bottom: 10px; letter-spacing: -0.2px; color: #C4101B">Segurança e valorização</div>
+          <div style="font-size: 15px; color: #6b6660; line-height: 1.6;">Oportunidades pensadas para valorizar o seu patrimônio.</div>
+        </div>
+
+        <div class="car-card" data-reveal style="background: #fff; border: 1px solid #ece7df; border-radius: 12px; padding: 34px 30px;">
+          <div style="width: 48px; height: 48px; border-radius: 12px; background: #c4101b; color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 24px; font-weight: 600; margin-bottom: 20px;">04</div>
+          <div style="font-size: 19px; font-weight: 600; margin-bottom: 10px; letter-spacing: -0.2px; color: #C4101B">Suporte completo</div>
+          <div style="font-size: 15px; color: #6b6660; line-height: 1.6;">Acompanho cada etapa, da escolha da planta às chaves na mão.</div>
+        </div>
+
+        <div class="car-card" data-reveal style="background: #fff; border: 1px solid #ece7df; border-radius: 12px; padding: 34px 30px;">
+          <div style="width: 48px; height: 48px; border-radius: 12px; background: #c4101b; color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 24px; font-weight: 600; margin-bottom: 20px;">05</div>
+          <div style="font-size: 19px; font-weight: 600; margin-bottom: 10px; letter-spacing: -0.2px; color: #C4101B">Agilidade</div>
+          <div style="font-size: 15px; color: #6b6660; line-height: 1.6;">Resposta rápida e processo sem burocracia desnecessária.</div>
+        </div>
+
+        <div class="car-card" data-reveal style="background: #fff; border: 1px solid #ece7df; border-radius: 12px; padding: 34px 30px;">
+          <div style="width: 48px; height: 48px; border-radius: 12px; background: #c4101b; color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 24px; font-weight: 600; margin-bottom: 20px;">06</div>
+          <div style="font-size: 19px; font-weight: 600; margin-bottom: 10px; letter-spacing: -0.2px; color: #C4101B">Estratégia</div>
+          <div style="font-size: 15px; color: #6b6660; line-height: 1.6;">Entendo o seu momento de vida para indicar o melhor imóvel.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TIPOS DE IMÓVEIS ===== -->
+  <section id="imoveis" style="background: #ffffff; background-image: radial-gradient(rgba(196,16,27,0.04) 1.2px, transparent 1.2px); background-size: 24px 24px; padding: 100px 0;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
+      <div data-reveal style="text-align: center; max-width: 800px; margin: 0 auto 56px">
+        <div style="font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; color: #c4101b; font-weight: 600; margin-bottom: 16px;">IMÓVEIS</div>
+        <h2 class="car-sec-title" style="font-family: var(--serif); font-weight: 500; font-size: 52px; line-height: 1.05; margin-bottom: 18px;">O que você procura, <span style="color: #c4101b;">eu encontro</span></h2><p style="font-size: 17px; color: #6b6660; line-height: 1.6; max-width: 600px; margin-left: auto; margin-right: auto">Trabalho com uma curadoria ampla de oportunidades, sempre com foco em segurança e valorização:</p>
+      </div>
+      <div class="car-imo-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;">
+
+        <div class="car-card" data-reveal style="border-radius: 12px; overflow: hidden; background: #faf8f4; border: 1px solid #ece7df;">
+          <div style="height: 320px; position: relative; overflow: hidden;">
+            <img src="assets/casas.webp" width="640" height="853" loading="lazy" decoding="async" alt="Casa disponível para compra em Araçatuba-SP" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+          </div>
+          <div style="padding: 22px 24px;">
+            <div style="font-size: 19px; font-weight: 600; letter-spacing: -0.2px; color: #C4101B">Casas</div>
+            <div style="font-size: 14px; color: #6b6660; margin-top: 4px;">Conforto e privacidade</div>
+          </div>
+        </div>
+
+        <div class="car-card" data-reveal style="border-radius: 12px; overflow: hidden; background: #faf8f4; border: 1px solid #ece7df;">
+          <div style="height: 320px; position: relative; overflow: hidden;">
+            <img src="assets/apartamentos.webp" width="640" height="853" loading="lazy" decoding="async" alt="Apartamento disponível para compra em Araçatuba-SP" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+          </div>
+          <div style="padding: 22px 24px;">
+            <div style="font-size: 19px; font-weight: 600; letter-spacing: -0.2px; color: #C4101B">Apartamentos</div>
+            <div style="font-size: 14px; color: #6b6660; margin-top: 4px;">Localização e praticidade</div>
+          </div>
+        </div>
+
+        <div class="car-card" data-reveal style="border-radius: 12px; overflow: hidden; background: #faf8f4; border: 1px solid #ece7df;">
+          <div style="height: 320px; position: relative; overflow: hidden;">
+            <img src="assets/lancamentos.webp" width="640" height="1143" loading="lazy" decoding="async" alt="Lançamento imobiliário em Araçatuba-SP" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+          </div>
+          <div style="padding: 22px 24px;">
+            <div style="font-size: 19px; font-weight: 600; letter-spacing: -0.2px; color: #C4101B">Lançamentos</div>
+            <div style="font-size: 14px; color: #6b6660; margin-top: 4px;">Os mais novos empreendimentos</div>
+          </div>
+        </div>
+
+        <div class="car-card" data-reveal style="border-radius: 12px; overflow: hidden; background: #faf8f4; border: 1px solid #ece7df;">
+          <div style="height: 320px; position: relative; overflow: hidden;">
+            <img src="assets/imoveis-na-planta.webp" width="640" height="1138" loading="lazy" decoding="async" alt="Imóvel na planta em Araçatuba-SP" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+          </div>
+          <div style="padding: 22px 24px;">
+            <div style="font-size: 19px; font-weight: 600; letter-spacing: -0.2px; color: #C4101B">Imóveis na planta</div>
+            <div style="font-size: 14px; color: #6b6660; margin-top: 4px;">Melhores condições de compra</div>
+          </div>
+        </div>
+
+        <div class="car-card" data-reveal style="border-radius: 12px; overflow: hidden; background: #faf8f4; border: 1px solid #ece7df;">
+          <div style="height: 320px; position: relative; overflow: hidden;">
+            <img src="assets/compre-ou-alugue.webp" width="640" height="839" loading="lazy" decoding="async" alt="Imóvel para comprar ou alugar em Araçatuba-SP" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+          </div>
+          <div style="padding: 22px 24px;">
+            <div style="font-size: 19px; font-weight: 600; letter-spacing: -0.2px; color: #C4101B">Alugar ou comprar</div>
+            <div style="font-size: 14px; color: #6b6660; margin-top: 4px;">Para cada momento</div>
+          </div>
+        </div>
+
+        <div class="car-card" data-reveal style="border-radius: 12px; overflow: hidden; background: #faf8f4; border: 1px solid #ece7df;">
+          <div style="height: 320px; position: relative; overflow: hidden;">
+            <img src="assets/voce-ou-sua-empresa.webp" width="640" height="599" loading="lazy" decoding="async" alt="Imóvel residencial ou comercial em Araçatuba-SP" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+          </div>
+          <div style="padding: 22px 24px;">
+            <div style="font-size: 19px; font-weight: 600; letter-spacing: -0.2px; color: #C4101B">Você ou sua empresa</div>
+            <div style="font-size: 14px; color: #6b6660; margin-top: 4px;">Residencial e comercial</div>
+          </div>
+        </div>
+
+      </div>
+      <div data-reveal style="text-align: center; margin-top: 48px;">
+        <a class="car-btn car-btn-primary" href="https://wa.me/5518997715724?text=Ol%C3%A1%20Silvana!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20im%C3%B3veis%20dispon%C3%ADveis." target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; background: #c4101b; color: #fff; text-decoration: none; padding: 16px 30px; border-radius: 999px; font-size: 15px; font-weight: 600; box-shadow: 0 12px 30px -10px rgba(196,16,27,0.5);">
+          Me diga o que você procura →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE / AUTORIDADE ===== -->
+  <section id="sobre" style="background: #141210; color: #f4f1ea; padding: 110px 0;">
+    <div class="car-two-col" style="max-width: 1240px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; align-items: center;">
+      <div data-reveal style="position: relative; min-height: 480px; border-radius: 6px; display: flex; align-items: center; justify-content: center; height: 499px;">
+        <img src="assets/silvana-caroli.webp" width="1100" height="1650" loading="lazy" decoding="async" alt="Silvana Caroli, corretora de imóveis de médio e alto padrão em Araçatuba-SP" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 20%; border-radius: 6px;">
+        <div class="car-balloon" style="position: absolute; top: 30px; right: -26px; background: #c4101b; color: #fff; padding: 12px 18px; border-radius: 14px; box-shadow: 0 18px 40px -16px rgba(196,16,27,0.85); font-size: 14px; font-weight: 600; max-width: 192px; line-height: 1.3;">+15 anos no mercado imobiliário</div>
+        <div class="car-balloon b2" style="position: absolute; bottom: 38px; left: -26px; background: #ffffff; color: #1b1814; padding: 12px 18px; border-radius: 14px; box-shadow: 0 18px 40px -16px rgba(0,0,0,0.55); font-size: 14px; font-weight: 600; max-width: 192px; line-height: 1.3;">Atendimento 100% personalizado</div>
+      </div>
+      <div data-reveal class="car-mobile-center">
+        <div style="font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; color: #ff5b66; font-weight: 600; margin-bottom: 18px;">COM QUEM VOCÊ VAI FALAR</div>
+        <h2 class="car-sec-title" style="font-family: var(--serif); font-weight: 500; font-size: 52px; line-height: 1.05; margin-bottom: 26px;">Quem é Silvana Caroli</h2>
+        <p style="font-size: 17px; color: #d2ccc1; line-height: 1.7; margin-bottom: 18px;">Silvana reúne expertise e dedicação em Araçatuba-SP, com <strong style="color: #ffffff;">atendimento 100% personalizado</strong> e suporte completo em cada etapa da compra, da escolha da planta à entrega das chaves.</p>
+        <p style="font-size: 17px; color: #d2ccc1; line-height: 1.7; margin-bottom: 18px;">Com mais de <strong style="color: #ffffff;">15 anos no mercado imobiliário</strong>, une agilidade, experiência e confiança para transformar o sonho da casa própria, ou do investimento certo, em realidade.</p>
+        <p style="font-size: 17px; color: #d2ccc1; line-height: 1.7; margin-bottom: 34px;">Especialista em <strong style="color: #ffffff;">lançamentos e investimentos de médio e alto padrão</strong>, atua em parceria apenas com construtoras sólidas, confiáveis e reconhecidas pela qualidade na entrega.</p>
+        <a class="car-btn car-btn-primary" href="https://wa.me/5518997715724?text=Ol%C3%A1%20Silvana!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20im%C3%B3veis%20dispon%C3%ADveis." target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; background: #c4101b; color: #fff; text-decoration: none; padding: 15px 28px; border-radius: 999px; font-size: 15px; font-weight: 600;">
+          Falar diretamente com a Silvana →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROVA SOCIAL ===== -->
+  <section id="depoimentos" style="background: #faf8f4; background-image: radial-gradient(rgba(27,24,20,0.045) 1.2px, transparent 1.2px); background-size: 22px 22px; padding: 100px 0;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
+      <div data-reveal style="text-align: center; max-width: 680px; margin: 0 auto 50px;">
+        <div style="font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; color: #c4101b; font-weight: 600; margin-bottom: 16px;">AVALIAÇÕES</div>
+        <h2 class="car-sec-title" style="font-family: var(--serif); font-weight: 500; font-size: 52px; line-height: 1.05; margin-bottom: 16px;">Quem já confiou, <span style="color: #c4101b;">recomenda</span></h2>
+        <div style="display: inline-flex; align-items: center; gap: 12px; font-size: 15px; color: #534c43; background: #fff; border: 1px solid #ece7df; padding: 10px 20px; border-radius: 999px;">
+          <span style="color: #c4101b; letter-spacing: 2px; font-size: 16px;">★★★★★</span>
+          <span style="font-weight: 600;">5,0 · 15 avaliações no Google</span>
+        </div>
+      </div>
+      <div data-reveal style="position: relative;">
+        <button type="button" aria-label="Anterior" id="reviewsPrev" class="car-arrow" style="position: absolute; left: 2px; top: 50%; transform: translateY(-50%); z-index: 4; width: 48px; height: 48px; border-radius: 999px; border: 1px solid #ece7df; background: #fff; color: #c4101b; box-shadow: 0 12px 30px -12px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; cursor: pointer;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+        </button>
+        <button type="button" aria-label="Próximo" id="reviewsNext" class="car-arrow" style="position: absolute; right: 2px; top: 50%; transform: translateY(-50%); z-index: 4; width: 48px; height: 48px; border-radius: 999px; border: 1px solid #ece7df; background: #fff; color: #c4101b; box-shadow: 0 12px 30px -12px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; cursor: pointer;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg>
+        </button>
+        <div class="car-rail" id="reviewsTrack" style="margin: 0 62px;">
+
+          <div data-card class="car-rcard" style="background: #fff; border: 1px solid #ece7df; border-radius: 12px; padding: 30px 28px; display: flex; flex-direction: column;">
+            <div style="color: #c4101b; letter-spacing: 2px; font-size: 15px; margin-bottom: 16px;">★★★★★</div>
+            <p style="font-size: 16px; color: #3a352e; line-height: 1.65; flex: 1;">Quero deixar meu agradecimento pelo excelente trabalho e atendimento da Silvana. Moro nos Estados Unidos, e mesmo à distância, me senti acompanhada e muito bem orientada durante todo o processo. Sempre prestativa, paciente e extremamente profissional.</p>
+            <div style="margin-top: 22px; display: flex; align-items: center; gap: 12px;">
+              <div style="width: 40px; height: 40px; border-radius: 999px; background: #ece7df; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #8a8175; font-size: 15px;">M</div>
+              <div>
+                <div style="font-weight: 600; font-size: 14px;">Mariana Rinco</div>
+                <div style="font-size: 12px; color: #8a8175;">Cliente · Google</div>
+              </div>
+            </div>
+          </div>
+
+          <div data-card class="car-rcard" style="background: #fff; border: 1px solid #ece7df; border-radius: 12px; padding: 30px 28px; display: flex; flex-direction: column;">
+            <div style="color: #c4101b; letter-spacing: 2px; font-size: 15px; margin-bottom: 16px;">★★★★★</div>
+            <p style="font-size: 16px; color: #3a352e; line-height: 1.65; flex: 1;">Sempre muito solícita em responder nossas dúvidas sobre os empreendimentos, ótima para direcionar qual a melhor fase de compra e qual o tipo certo de financiamento. Espetacular em trabalhar nossos imóveis, seja venda ou aluguel!</p>
+            <div style="margin-top: 22px; display: flex; align-items: center; gap: 12px;">
+              <div style="width: 40px; height: 40px; border-radius: 999px; background: #ece7df; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #8a8175; font-size: 15px;">I</div>
+              <div>
+                <div style="font-weight: 600; font-size: 14px;">Ingrid Caroli Cruz</div>
+                <div style="font-size: 12px; color: #8a8175;">Cliente · Google</div>
+              </div>
+            </div>
+          </div>
+
+          <div data-card class="car-rcard" style="background: #fff; border: 1px solid #ece7df; border-radius: 12px; padding: 30px 28px; display: flex; flex-direction: column;">
+            <div style="color: #c4101b; letter-spacing: 2px; font-size: 15px; margin-bottom: 16px;">★★★★★</div>
+            <p style="font-size: 16px; color: #3a352e; line-height: 1.65; flex: 1;">Ótimo atendimento! Entende do que fala, grande variedade de produtos dentro do valor de mercado. Atendimento e profissionalismo bem diferenciado. Transmite segurança e confiança. Muito transparente.</p>
+            <div style="margin-top: 22px; display: flex; align-items: center; gap: 12px;">
+              <div style="width: 40px; height: 40px; border-radius: 999px; background: #ece7df; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #8a8175; font-size: 15px;">R</div>
+              <div>
+                <div style="font-weight: 600; font-size: 14px;">Renata Maia</div>
+                <div style="font-size: 12px; color: #8a8175;">Cliente · Google</div>
+              </div>
+            </div>
+          </div>
+
+          <div data-card class="car-rcard" style="background: #fff; border: 1px solid #ece7df; border-radius: 12px; padding: 30px 28px; display: flex; flex-direction: column;">
+            <div style="color: #c4101b; letter-spacing: 2px; font-size: 15px; margin-bottom: 16px;">★★★★★</div>
+            <p style="font-size: 16px; color: #3a352e; line-height: 1.65; flex: 1;">A Silvana é excelente profissional, indico de olhos fechados, ela é comprometida e eficiente! Sem falar que é extremamente confiável!</p>
+            <div style="margin-top: 22px; display: flex; align-items: center; gap: 12px;">
+              <div style="width: 40px; height: 40px; border-radius: 999px; background: #ece7df; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #8a8175; font-size: 15px;">D</div>
+              <div>
+                <div style="font-weight: 600; font-size: 14px;">Daniele Palermo Schneidereit</div>
+                <div style="font-size: 12px; color: #8a8175;">Cliente · Google</div>
+              </div>
+            </div>
+          </div>
+
+          <div data-card class="car-rcard" style="background: #fff; border: 1px solid #ece7df; border-radius: 12px; padding: 30px 28px; display: flex; flex-direction: column;">
+            <div style="color: #c4101b; letter-spacing: 2px; font-size: 15px; margin-bottom: 16px;">★★★★★</div>
+            <p style="font-size: 16px; color: #3a352e; line-height: 1.65; flex: 1;">Excelente corretora, comprometida, realmente entende e agiliza o que precisamos, aluguei uma sala no New York Tower com a Silvana e estou muito feliz com a aquisição.</p>
+            <div style="margin-top: 22px; display: flex; align-items: center; gap: 12px;">
+              <div style="width: 40px; height: 40px; border-radius: 999px; background: #ece7df; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #8a8175; font-size: 15px;">A</div>
+              <div>
+                <div style="font-weight: 600; font-size: 14px;">Amanda Amaral</div>
+                <div style="font-size: 12px; color: #8a8175;">Cliente · Google</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div data-reveal style="display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: center; margin-top: 56px;">
+        <div style="display: flex; align-items: center; gap: 24px; background: #fff; border: 1px solid #ece7df; border-radius: 16px; padding: 22px 34px; box-shadow: 0 18px 44px -26px rgba(0,0,0,0.25);">
+          <div style="font-family: var(--serif); font-size: 66px; font-weight: 600; color: #c4101b; line-height: 0.82;">+15</div>
+          <div style="width: 1px; height: 58px; background: #ece7df;"></div>
+          <div>
+            <div style="color: #c4101b; letter-spacing: 3px; font-size: 14px; margin-bottom: 7px;">★★★★★</div>
+            <div style="font-size: 16px; font-weight: 600; letter-spacing: -0.1px;">Anos de experiência</div>
+            <div style="font-size: 14px; color: #6b6660; margin-top: 2px;">Atendimento em Araçatuba e região</div>
+          </div>
+        </div>
+        <a class="car-btn" href="https://share.google/PH5llrKlpF684aD1C" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; color: #1b1814; text-decoration: none; font-weight: 600; font-size: 14px; border-bottom: 1px solid #1b1814; padding-bottom: 2px;">Ver avaliações no Google →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ÁREAS DE ATUAÇÃO ===== -->
+  <section id="atuacao" style="background: #ffffff; padding: 100px 0;">
+    <div class="car-two-col" style="max-width: 1240px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 56px; align-items: center;">
+      <div data-reveal class="car-mobile-center">
+        <div style="font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; color: #c4101b; font-weight: 600; margin-bottom: 16px;">ONDE ATUO</div>
+        <h2 class="car-sec-title" style="font-family: var(--serif); font-weight: 500; font-size: 52px; line-height: 1.05; margin-bottom: 20px; max-width: 440px">Atendimento em <span style="color: #c4101b;">Araçatuba e região</span></h2>
+        <p style="font-size: 17px; color: #6b6660; line-height: 1.65;">Foco em empreendimentos de médio e alto padrão nos principais bairros da cidade. Onde está o imóvel ideal, eu chego até ele.</p>
+      </div>
+      <div data-reveal class="car-chips-row" style="display: flex; flex-wrap: wrap; gap: 10px; max-width: 622px">
+        <span class="car-chip" style="display: inline-block; background: #faf8f4; border: 1px solid #ece7df; color: #3a352e; padding: 10px 18px; border-radius: 999px; font-size: 14px; font-weight: 500; cursor: default;">Jardim Nova Yorque</span>
+        <span class="car-chip" style="display: inline-block; background: #faf8f4; border: 1px solid #ece7df; color: #3a352e; padding: 10px 18px; border-radius: 999px; font-size: 14px; font-weight: 500; cursor: default;">Nova Iorque</span>
+        <span class="car-chip" style="display: inline-block; background: #faf8f4; border: 1px solid #ece7df; color: #3a352e; padding: 10px 18px; border-radius: 999px; font-size: 14px; font-weight: 500; cursor: default;">Alphaville</span>
+        <span class="car-chip" style="display: inline-block; background: #faf8f4; border: 1px solid #ece7df; color: #3a352e; padding: 10px 18px; border-radius: 999px; font-size: 14px; font-weight: 500; cursor: default;">Região do Alvorada</span>
+        <span class="car-chip" style="display: inline-block; background: #faf8f4; border: 1px solid #ece7df; color: #3a352e; padding: 10px 18px; border-radius: 999px; font-size: 14px; font-weight: 500; cursor: default;">Ipanema</span>
+        <span class="car-chip" style="display: inline-block; background: #faf8f4; border: 1px solid #ece7df; color: #3a352e; padding: 10px 18px; border-radius: 999px; font-size: 14px; font-weight: 500; cursor: default;">Aeroporto Aviação</span>
+        <span class="car-chip" style="display: inline-block; background: #faf8f4; border: 1px solid #ece7df; color: #3a352e; padding: 10px 18px; border-radius: 999px; font-size: 14px; font-weight: 500; cursor: default;">Vila Aeronáutica</span>
+        <span class="car-chip" style="display: inline-block; background: #faf8f4; border: 1px solid #ece7df; color: #3a352e; padding: 10px 18px; border-radius: 999px; font-size: 14px; font-weight: 500; cursor: default;">Centro</span>
+        <span class="car-chip" style="display: inline-block; background: #faf8f4; border: 1px solid #ece7df; color: #3a352e; padding: 10px 18px; border-radius: 999px; font-size: 14px; font-weight: 500; cursor: default;">Vila Mendonça</span>
+        <span class="car-chip" style="display: inline-block; background: #faf8f4; border: 1px solid #ece7df; color: #3a352e; padding: 10px 18px; border-radius: 999px; font-size: 14px; font-weight: 500; cursor: default;">Vila Bandeirantes</span>
+        <span class="car-chip" style="display: inline-block; background: #faf8f4; border: 1px solid #ece7df; color: #3a352e; padding: 10px 18px; border-radius: 999px; font-size: 14px; font-weight: 500; cursor: default;">Bairro das Bandeiras</span>
+        <span class="car-chip" style="display: inline-block; background: #faf8f4; border: 1px solid #ece7df; color: #3a352e; padding: 10px 18px; border-radius: 999px; font-size: 14px; font-weight: 500; cursor: default;">Concórdia</span>
+        <span class="car-chip" style="display: inline-block; background: #faf8f4; border: 1px solid #ece7df; color: #3a352e; padding: 10px 18px; border-radius: 999px; font-size: 14px; font-weight: 500; cursor: default;">Panorama</span>
+        <span class="car-chip" style="display: inline-block; background: #faf8f4; border: 1px solid #ece7df; color: #3a352e; padding: 10px 18px; border-radius: 999px; font-size: 14px; font-weight: 500; cursor: default;">Jardim Sumaré</span>
+        <span class="car-chip" style="display: inline-block; background: #faf8f4; border: 1px solid #ece7df; color: #3a352e; padding: 10px 18px; border-radius: 999px; font-size: 14px; font-weight: 500; cursor: default;">Santana</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMO FUNCIONA ===== -->
+  <section id="atendimento" style="background: #faf8f4; background-image: radial-gradient(rgba(27,24,20,0.045) 1.2px, transparent 1.2px); background-size: 22px 22px; padding: 100px 0; border-top: 1px solid #ece7df;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;">
+      <div data-reveal style="text-align: center; max-width: 640px; margin: 0 auto 64px;">
+        <div style="font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; color: #c4101b; font-weight: 600; margin-bottom: 16px;">COMO FUNCIONA</div>
+        <h2 class="car-sec-title" style="font-family: var(--serif); font-weight: 500; font-size: 52px; line-height: 1.05;">Como é o atendimento</h2>
+      </div>
+      <div style="position: relative;">
+        <div class="car-tl-line" style="position: absolute; top: 38px; left: 16%; right: 16%; height: 3px; background: linear-gradient(90deg, rgba(196,16,27,0.25), #c4101b, rgba(196,16,27,0.25)); border-radius: 3px;"></div>
+        <div class="car-imo-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px;">
+
+          <div class="car-step" data-reveal style="text-align: center;">
+            <div class="car-step-num" style="width: 70px; height: 70px; border-radius: 50%; background: #c4101b; color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--sans); font-size: 26px; font-weight: 700; margin: 0 auto 24px; box-shadow: 0 12px 28px -10px rgba(196,16,27,0.6); z-index: 1;">1</div>
+            <div style="font-size: 19px; font-weight: 600; margin-bottom: 10px;">Você me chama no WhatsApp</div>
+            <div style="font-size: 15px; color: #6b6660; line-height: 1.6; max-width: 300px; margin: 0 auto;">E conta o que procura: para morar ou investir? Casa ou apartamento? Para você ou sua empresa?</div>
+          </div>
+
+          <div class="car-step" data-reveal style="text-align: center;">
+            <div class="car-step-num" style="width: 70px; height: 70px; border-radius: 50%; background: #c4101b; color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--sans); font-size: 26px; font-weight: 700; margin: 0 auto 24px; box-shadow: 0 12px 28px -10px rgba(196,16,27,0.6); z-index: 1;">2</div>
+            <div style="font-size: 19px; font-weight: 600; margin-bottom: 10px;">Faço a curadoria pra você</div>
+            <div style="font-size: 15px; color: #6b6660; line-height: 1.6; max-width: 300px; margin: 0 auto;">Seleciono as melhores opções para o seu perfil, momento e objetivo.</div>
+          </div>
+
+          <div class="car-step" data-reveal style="text-align: center;">
+            <div class="car-step-num" style="width: 70px; height: 70px; border-radius: 50%; background: #c4101b; color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--sans); font-size: 26px; font-weight: 700; margin: 0 auto 24px; box-shadow: 0 12px 28px -10px rgba(196,16,27,0.6); z-index: 1;">3</div>
+            <div style="font-size: 19px; font-weight: 600; margin-bottom: 10px;">Acompanho cada etapa</div>
+            <div style="font-size: 15px; color: #6b6660; line-height: 1.6; max-width: 300px; margin: 0 auto;">Com transparência e agilidade, do primeiro contato até as chaves na mão.</div>
+          </div>
+
+        </div>
+      </div>
+      <div data-reveal style="text-align: center; margin-top: 56px;">
+        <a class="car-btn car-btn-primary" href="https://wa.me/5518997715724?text=Ol%C3%A1%20Silvana!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20im%C3%B3veis%20dispon%C3%ADveis." target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; background: #c4101b; color: #fff; text-decoration: none; padding: 16px 30px; border-radius: 999px; font-size: 15px; font-weight: 600; box-shadow: 0 12px 30px -10px rgba(196,16,27,0.5);">
+          Quero falar com a Silvana agora →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA FINAL + LOCALIZAÇÃO ===== -->
+  <section id="contato" style="position: relative; background-color: #c4101b; background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.045) 0, rgba(255,255,255,0.045) 2px, transparent 2px, transparent 22px); color: #fff; padding: 110px 0;">
+    <div style="position: relative; z-index: 1; max-width: 1240px; margin: 0 auto; padding: 0 32px;">
+      <div class="car-contact-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: stretch;">
+        <div data-reveal style="display: flex; flex-direction: column; gap: 18px; justify-content: center;">
+          <div class="car-mobile-center">
+            <div style="font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; color: #ffd2d5; font-weight: 600; margin-bottom: 16px;">VAMOS COMEÇAR</div>
+            <h2 class="car-sec-title" style="font-family: var(--serif); font-weight: 500; font-size: 46px; line-height: 1.06; margin-bottom: 16px;">Vamos encontrar o imóvel ideal para você</h2>
+            <p style="font-size: 17px; color: #ffe1e3; line-height: 1.6; max-width: 520px;">Fale agora com Silvana Caroli e receba uma curadoria personalizada de imóveis em Araçatuba-SP.</p>
+          </div>
+          <div style="display: flex; gap: 14px; align-items: center; padding: 22px 24px; background: #a50d16; border-radius: 8px;">
+            <span style="display: inline-flex; flex-shrink: 0;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg></span>
+            <div>
+              <div style="font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #ffd2d5; font-weight: 600; margin-bottom: 6px;">Escritório</div>
+              <div style="font-size: 15px; color: #ffe1e3; line-height: 1.55;">New York Tower — Av. Brasília, 2121, Sala 1818<br>Jardim Nova Yorque, Araçatuba — SP, 16018-000</div>
+            </div>
+          </div>
+          <div style="display: flex; gap: 14px; align-items: center; padding: 22px 24px; background: #a50d16; border-radius: 8px;">
+            <span style="display: inline-flex; flex-shrink: 0;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"></path></svg></span>
+            <div>
+              <div style="font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #ffd2d5; font-weight: 600; margin-bottom: 4px;">Telefone / WhatsApp</div>
+              <a href="https://wa.me/5518997715724?text=Ol%C3%A1%20Silvana!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20im%C3%B3veis%20dispon%C3%ADveis." target="_blank" rel="noopener" style="font-size: 19px; color: #fff; text-decoration: none; font-weight: 600;">(18) 99771-5724</a>
+            </div>
+          </div>
+        </div>
+        <div data-reveal style="min-height: 460px; border-radius: 8px; overflow: hidden; border: 1px solid #a50d16;">
+          <iframe title="Mapa Caroli Imóveis" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.0839744599966!2d-50.43732519999999!3d-21.2285184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94964377fe3b1c89%3A0x9830f09b2fb2f1ac!2sSilvana%20Caroli%20%7C%20Caroli%20im%C3%B3veis%20%7C%20Imobili%C3%A1ria%20em%20Ara%C3%A7atuba!5e0!3m2!1spt-BR!2sbr!4v1782823784162!5m2!1spt-BR!2sbr" style="width: 100%; height: 100%; min-height: 460px; border: 0;" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+      <div data-reveal style="text-align: center; margin-top: 48px;">
+        <a class="car-btn car-btn-white" href="https://wa.me/5518997715724?text=Ol%C3%A1%20Silvana!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20im%C3%B3veis%20dispon%C3%ADveis." target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 12px; background: #fff; color: #c4101b; text-decoration: none; padding: 18px 38px; border-radius: 999px; font-size: 17px; font-weight: 700; box-shadow: 0 16px 40px -12px rgba(0,0,0,0.35);">
+          <svg width="22" height="22" viewBox="0 0 32 32" fill="#c4101b" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.2 1.6 6L4 27l6.2-1.6c1.7.9 3.7 1.4 5.8 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.2C6 9.5 10.5 5 16 5s10 4.5 10 10-4.5 9.8-10 9.8zm5.5-7.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-1.8-.9-2.9-1.6-4.1-3.6-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5 0-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6 2 .8 2.7.9 3.7.8.6-.1 1.8-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4z"></path></svg>
+          Chamar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer style="background: #0e0c0b; color: #8a8175; padding: 40px 0;">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+      <div style="display: flex; flex-direction: column; line-height: 1;">
+        <span style="font-family: var(--serif); font-size: 22px; font-weight: 600; color: #f4f1ea;">Caroli Imóveis</span>
+        <span style="font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #c4101b; font-weight: 600; margin-top: 3px;">Imobiliária em Araçatuba-SP</span>
+      </div>
+      <div style="font-size: 13px;">© <span id="anoAtual">2026</span> Silvana Caroli · Imóveis de médio e alto padrão · Araçatuba-SP</div>
+    </div>
+  </footer>
+
+  <!-- ===== FLOATING WHATSAPP ===== -->
+  <a class="car-fab" href="https://wa.me/5518997715724?text=Ol%C3%A1%20Silvana!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20im%C3%B3veis%20dispon%C3%ADveis." target="_blank" rel="noopener" aria-label="WhatsApp" style="position: fixed; right: 24px; bottom: 24px; z-index: 60; width: 60px; height: 60px; border-radius: 999px; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 12px 30px -8px rgba(0,0,0,0.4); text-decoration: none; transition: transform 0.25s ease;">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.2 1.6 6L4 27l6.2-1.6c1.7.9 3.7 1.4 5.8 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-3.7 1 1-3.6-.2-.4c-1-1.6-1.5-3.4-1.5-5.2C6 9.5 10.5 5 16 5s10 4.5 10 10-4.5 9.8-10 9.8zm5.5-7.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-1.8-.9-2.9-1.6-4.1-3.6-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5 0-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6 2 .8 2.7.9 3.7.8.6-.1 1.8-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.2-.6-.4z"></path></svg>
+  </a>
+
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  // Ano do rodapé
+  var anoEl = document.getElementById("anoAtual");
+  if (anoEl) anoEl.textContent = new Date().getFullYear();
+
+  // Animação de revelar ao rolar a página
+  var revealEls = document.querySelectorAll("[data-reveal]");
+  if ("IntersectionObserver" in window) {
+    revealEls.forEach(function (el) { el.classList.add("reveal"); });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(function (el) { io.observe(el); });
+  }
+
+  // Carrossel de depoimentos: 5 avaliações reais, sem repetição — por isso é um
+  // carrossel simples que anda um card por vez e para nas pontas (sem loop
+  // infinito, que só faz sentido com uma lista de cards repetida).
+  var track = document.getElementById("reviewsTrack");
+  if (track) {
+    var raf = null;
+    var isAnimating = false;
+    // Guarda o destino pretendido separado do scrollLeft ao vivo: se o usuário
+    // clicar de novo antes da animação anterior terminar, o próximo passo soma
+    // a partir de onde o carrossel deveria parar, não de onde ele está no meio
+    // do movimento — senão cliques rápidos em sequência quase não avançam.
+    var targetLeft = track.scrollLeft;
+
+    function cardStep() {
+      var c = track.querySelector("[data-card]");
+      return c ? (c.getBoundingClientRect().width + 22) : 382;
+    }
+    function maxScroll() {
+      return track.scrollWidth - track.clientWidth;
+    }
+    function animateTo(target) {
+      cancelAnimationFrame(raf);
+      target = Math.max(0, Math.min(maxScroll(), target));
+      targetLeft = target;
+      isAnimating = true;
+      var start = track.scrollLeft, dist = target - start, dur = 420, t0 = performance.now();
+      function ease(p) { return p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2; }
+      function step(now) {
+        var p = Math.min(1, (now - t0) / dur);
+        track.scrollTo({ left: Math.round(start + dist * ease(p)), behavior: "instant" });
+        if (p < 1) { raf = requestAnimationFrame(step); }
+        else { isAnimating = false; }
+      }
+      raf = requestAnimationFrame(step);
+    }
+    function move(dir) {
+      // Se o carrossel não está em animação (ex.: usuário arrastou manualmente),
+      // sincroniza o destino com a posição real antes de somar o próximo passo.
+      if (!isAnimating) targetLeft = track.scrollLeft;
+      animateTo(targetLeft + dir * cardStep());
+    }
+
+    var prevBtn = document.getElementById("reviewsPrev");
+    var nextBtn = document.getElementById("reviewsNext");
+    if (prevBtn) prevBtn.addEventListener("click", function () { move(-1); });
+    if (nextBtn) nextBtn.addEventListener("click", function () { move(1); });
+  }
+})();
+</script>
+
+</body>
+</html>
