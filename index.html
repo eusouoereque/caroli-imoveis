@@ -84,8 +84,16 @@
   .car-rail::-webkit-scrollbar { display: none; }
   .car-rcard { flex: 0 0 calc((100% - 44px) / 3); width: calc((100% - 44px) / 3); min-width: 0; }
   @media (max-width: 760px) {
-    .car-rail { margin: 0 !important; gap: 16px; scroll-snap-type: x mandatory; padding-left: 7%; padding-right: 7%; }
-    .car-rcard { flex: 0 0 86% !important; width: 86% !important; scroll-snap-align: center; }
+    /* O trilho sangra até a borda da tela (a margem negativa anula o padding de
+       32px do container da seção). Sem isso o trilho recorta a espiada do próximo
+       card, que no mobile é a única pista de que dá para arrastar — as setas somem.
+       Medidas em vw, e não em %, porque padding em % se resolve contra a largura do
+       elemento pai, não da tela. */
+    .car-rail { margin: 0 -32px !important; gap: 16px; scroll-snap-type: x mandatory; padding-left: 10vw; padding-right: 10vw; }
+    /* scroll-snap-stop: always obriga a rolagem a parar em cada card. Sem ele, o
+       "x mandatory" só escolhe onde encaixar depois que o impulso do dedo acaba, e
+       um arrasto mais forte voa vários cards de uma vez. */
+    .car-rcard { flex: 0 0 80vw !important; width: 80vw !important; scroll-snap-align: center; scroll-snap-stop: always; }
     .car-arrow { display: none !important; }
   }
   .car-arrow { transition: background .25s ease, color .25s ease, transform .25s ease, box-shadow .25s ease; }
