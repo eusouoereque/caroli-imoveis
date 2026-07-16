@@ -84,8 +84,16 @@
   .car-rail::-webkit-scrollbar { display: none; }
   .car-rcard { flex: 0 0 calc((100% - 44px) / 3); width: calc((100% - 44px) / 3); min-width: 0; }
   @media (max-width: 760px) {
-    .car-rail { margin: 0 !important; gap: 16px; scroll-snap-type: x mandatory; padding-left: 7%; padding-right: 7%; }
-    .car-rcard { flex: 0 0 86% !important; width: 86% !important; scroll-snap-align: center; }
+    /* O trilho sangra até a borda da tela (a margem negativa anula o padding de
+       32px do container da seção). Sem isso o trilho recorta a espiada do próximo
+       card, que no mobile é a única pista de que dá para arrastar — as setas somem.
+       Medidas em vw, e não em %, porque padding em % se resolve contra a largura do
+       elemento pai, não da tela. */
+    .car-rail { margin: 0 -32px !important; gap: 16px; scroll-snap-type: x mandatory; padding-left: 10vw; padding-right: 10vw; }
+    /* scroll-snap-stop: always obriga a rolagem a parar em cada card. Sem ele, o
+       "x mandatory" só escolhe onde encaixar depois que o impulso do dedo acaba, e
+       um arrasto mais forte voa vários cards de uma vez. */
+    .car-rcard { flex: 0 0 80vw !important; width: 80vw !important; scroll-snap-align: center; scroll-snap-stop: always; }
     .car-arrow { display: none !important; }
   }
   .car-arrow { transition: background .25s ease, color .25s ease, transform .25s ease, box-shadow .25s ease; }
@@ -99,6 +107,7 @@
     .car-two-col { grid-template-columns: 1fr !important; gap: 36px !important; }
     .car-contact-grid { grid-template-columns: 1fr !important; }
     .car-bene-grid { grid-template-columns: 1fr !important; }
+    /* Usada pelos passos do "Como é o atendimento" (a seção de imóveis virou carrossel). */
     .car-imo-grid { grid-template-columns: 1fr !important; }
     .car-tl-line { display: none !important; }
     /* Hero: foto acima do título no mobile */
@@ -249,68 +258,96 @@
         <div style="font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; color: #c4101b; font-weight: 600; margin-bottom: 16px;">IMÓVEIS</div>
         <h2 class="car-sec-title" style="font-family: var(--serif); font-weight: 500; font-size: 52px; line-height: 1.05; margin-bottom: 18px;">O que você procura, <span style="color: #c4101b;">eu encontro</span></h2><p style="font-size: 17px; color: #6b6660; line-height: 1.6; max-width: 600px; margin-left: auto; margin-right: auto">Trabalho com uma curadoria ampla de oportunidades, sempre com foco em segurança e valorização:</p>
       </div>
-      <div class="car-imo-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;">
+      <div data-reveal style="position: relative;">
+        <button type="button" aria-label="Anterior" id="imoveisPrev" class="car-arrow" style="position: absolute; left: 2px; top: 50%; transform: translateY(-50%); z-index: 4; width: 48px; height: 48px; border-radius: 999px; border: 1px solid #ece7df; background: #fff; color: #c4101b; box-shadow: 0 12px 30px -12px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; cursor: pointer;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>
+        </button>
+        <button type="button" aria-label="Próximo" id="imoveisNext" class="car-arrow" style="position: absolute; right: 2px; top: 50%; transform: translateY(-50%); z-index: 4; width: 48px; height: 48px; border-radius: 999px; border: 1px solid #ece7df; background: #fff; color: #c4101b; box-shadow: 0 12px 30px -12px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; cursor: pointer;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg>
+        </button>
+        <div class="car-rail" id="imoveisTrack" style="margin: 0 62px; align-items: stretch;">
 
-        <div class="car-card" data-reveal style="border-radius: 12px; overflow: hidden; background: #faf8f4; border: 1px solid #ece7df;">
-          <div style="height: 320px; position: relative; overflow: hidden;">
-            <img src="assets/casas.webp" width="640" height="853" loading="lazy" decoding="async" alt="Casa disponível para compra em Araçatuba-SP" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+          <div data-card class="car-card car-rcard" style="border-radius: 12px; overflow: hidden; background: #faf8f4; border: 1px solid #ece7df;">
+            <div style="height: 320px; position: relative; overflow: hidden;">
+              <img src="assets/central-park-towers.webp" width="640" height="640" loading="lazy" decoding="async" alt="Central Park Towers, empreendimento residencial em Araçatuba-SP" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+            </div>
+            <div style="padding: 22px 24px;">
+              <div style="font-size: 19px; font-weight: 600; letter-spacing: -0.2px; color: #C4101B">Central Park Towers</div>
+              <div style="font-size: 14px; color: #6b6660; margin-top: 4px;">Av. Brasília · 2 a 4 suítes, 90 a 220 m²</div>
+            </div>
           </div>
-          <div style="padding: 22px 24px;">
-            <div style="font-size: 19px; font-weight: 600; letter-spacing: -0.2px; color: #C4101B">Casas</div>
-            <div style="font-size: 14px; color: #6b6660; margin-top: 4px;">Conforto e privacidade</div>
+
+          <div data-card class="car-card car-rcard" style="border-radius: 12px; overflow: hidden; background: #faf8f4; border: 1px solid #ece7df;">
+            <div style="height: 320px; position: relative; overflow: hidden;">
+              <img src="assets/ferreira-aya.webp" width="640" height="961" loading="lazy" decoding="async" alt="Ferreira Aya, empreendimento residencial no Jardim Nova Yorque, Araçatuba-SP" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+            </div>
+            <div style="padding: 22px 24px;">
+              <div style="font-size: 19px; font-weight: 600; letter-spacing: -0.2px; color: #C4101B">Ferreira Aya</div>
+              <div style="font-size: 14px; color: #6b6660; margin-top: 4px;">Jardim Nova Yorque · 1 e 2 suítes, 48 e 52 m²</div>
+            </div>
           </div>
+
+          <div data-card class="car-card car-rcard" style="border-radius: 12px; overflow: hidden; background: #faf8f4; border: 1px solid #ece7df;">
+            <div style="height: 320px; position: relative; overflow: hidden;">
+              <img src="assets/ferreira-downtown.webp" width="640" height="960" loading="lazy" decoding="async" alt="Ferreira Downtown, studios no centro de Araçatuba-SP" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+            </div>
+            <div style="padding: 22px 24px;">
+              <div style="font-size: 19px; font-weight: 600; letter-spacing: -0.2px; color: #C4101B">Ferreira Downtown</div>
+              <div style="font-size: 14px; color: #6b6660; margin-top: 4px;">Centro · studios e 1 dormitório</div>
+            </div>
+          </div>
+
+          <div data-card class="car-card car-rcard" style="border-radius: 12px; overflow: hidden; background: #faf8f4; border: 1px solid #ece7df;">
+            <div style="height: 320px; position: relative; overflow: hidden;">
+              <img src="assets/ferreira-hub.webp" width="640" height="360" loading="lazy" decoding="async" alt="Ferreira Hub, complexo multiuso em Araçatuba-SP" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+            </div>
+            <div style="padding: 22px 24px;">
+              <div style="font-size: 19px; font-weight: 600; letter-spacing: -0.2px; color: #C4101B">Ferreira Hub</div>
+              <div style="font-size: 14px; color: #6b6660; margin-top: 4px;">Complexo multiuso · morar, trabalhar e investir</div>
+            </div>
+          </div>
+
+          <div data-card class="car-card car-rcard" style="border-radius: 12px; overflow: hidden; background: #faf8f4; border: 1px solid #ece7df;">
+            <div style="height: 320px; position: relative; overflow: hidden;">
+              <img src="assets/casas.webp" width="640" height="853" loading="lazy" decoding="async" alt="Casa disponível para compra em Araçatuba-SP" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+            </div>
+            <div style="padding: 22px 24px;">
+              <div style="font-size: 19px; font-weight: 600; letter-spacing: -0.2px; color: #C4101B">Casas</div>
+              <div style="font-size: 14px; color: #6b6660; margin-top: 4px;">Conforto e privacidade</div>
+            </div>
+          </div>
+
+          <div data-card class="car-card car-rcard" style="border-radius: 12px; overflow: hidden; background: #faf8f4; border: 1px solid #ece7df;">
+            <div style="height: 320px; position: relative; overflow: hidden;">
+              <img src="assets/apartamentos.webp" width="640" height="853" loading="lazy" decoding="async" alt="Apartamento disponível para compra em Araçatuba-SP" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+            </div>
+            <div style="padding: 22px 24px;">
+              <div style="font-size: 19px; font-weight: 600; letter-spacing: -0.2px; color: #C4101B">Apartamentos</div>
+              <div style="font-size: 14px; color: #6b6660; margin-top: 4px;">Localização e praticidade</div>
+            </div>
+          </div>
+
+          <div data-card class="car-card car-rcard" style="border-radius: 12px; overflow: hidden; background: #faf8f4; border: 1px solid #ece7df;">
+            <div style="height: 320px; position: relative; overflow: hidden;">
+              <img src="assets/compre-ou-alugue.webp" width="640" height="839" loading="lazy" decoding="async" alt="Imóvel para comprar ou alugar em Araçatuba-SP" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+            </div>
+            <div style="padding: 22px 24px;">
+              <div style="font-size: 19px; font-weight: 600; letter-spacing: -0.2px; color: #C4101B">Alugar ou comprar</div>
+              <div style="font-size: 14px; color: #6b6660; margin-top: 4px;">Para cada momento</div>
+            </div>
+          </div>
+
+          <div data-card class="car-card car-rcard" style="border-radius: 12px; overflow: hidden; background: #faf8f4; border: 1px solid #ece7df;">
+            <div style="height: 320px; position: relative; overflow: hidden;">
+              <img src="assets/voce-ou-sua-empresa.webp" width="640" height="599" loading="lazy" decoding="async" alt="Imóvel residencial ou comercial em Araçatuba-SP" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+            </div>
+            <div style="padding: 22px 24px;">
+              <div style="font-size: 19px; font-weight: 600; letter-spacing: -0.2px; color: #C4101B">Você ou sua empresa</div>
+              <div style="font-size: 14px; color: #6b6660; margin-top: 4px;">Residencial e comercial</div>
+            </div>
+          </div>
+
         </div>
-
-        <div class="car-card" data-reveal style="border-radius: 12px; overflow: hidden; background: #faf8f4; border: 1px solid #ece7df;">
-          <div style="height: 320px; position: relative; overflow: hidden;">
-            <img src="assets/apartamentos.webp" width="640" height="853" loading="lazy" decoding="async" alt="Apartamento disponível para compra em Araçatuba-SP" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-          </div>
-          <div style="padding: 22px 24px;">
-            <div style="font-size: 19px; font-weight: 600; letter-spacing: -0.2px; color: #C4101B">Apartamentos</div>
-            <div style="font-size: 14px; color: #6b6660; margin-top: 4px;">Localização e praticidade</div>
-          </div>
-        </div>
-
-        <div class="car-card" data-reveal style="border-radius: 12px; overflow: hidden; background: #faf8f4; border: 1px solid #ece7df;">
-          <div style="height: 320px; position: relative; overflow: hidden;">
-            <img src="assets/lancamentos.webp" width="640" height="1143" loading="lazy" decoding="async" alt="Lançamento imobiliário em Araçatuba-SP" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-          </div>
-          <div style="padding: 22px 24px;">
-            <div style="font-size: 19px; font-weight: 600; letter-spacing: -0.2px; color: #C4101B">Lançamentos</div>
-            <div style="font-size: 14px; color: #6b6660; margin-top: 4px;">Os mais novos empreendimentos</div>
-          </div>
-        </div>
-
-        <div class="car-card" data-reveal style="border-radius: 12px; overflow: hidden; background: #faf8f4; border: 1px solid #ece7df;">
-          <div style="height: 320px; position: relative; overflow: hidden;">
-            <img src="assets/imoveis-na-planta.webp" width="640" height="1138" loading="lazy" decoding="async" alt="Imóvel na planta em Araçatuba-SP" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-          </div>
-          <div style="padding: 22px 24px;">
-            <div style="font-size: 19px; font-weight: 600; letter-spacing: -0.2px; color: #C4101B">Imóveis na planta</div>
-            <div style="font-size: 14px; color: #6b6660; margin-top: 4px;">Melhores condições de compra</div>
-          </div>
-        </div>
-
-        <div class="car-card" data-reveal style="border-radius: 12px; overflow: hidden; background: #faf8f4; border: 1px solid #ece7df;">
-          <div style="height: 320px; position: relative; overflow: hidden;">
-            <img src="assets/compre-ou-alugue.webp" width="640" height="839" loading="lazy" decoding="async" alt="Imóvel para comprar ou alugar em Araçatuba-SP" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-          </div>
-          <div style="padding: 22px 24px;">
-            <div style="font-size: 19px; font-weight: 600; letter-spacing: -0.2px; color: #C4101B">Alugar ou comprar</div>
-            <div style="font-size: 14px; color: #6b6660; margin-top: 4px;">Para cada momento</div>
-          </div>
-        </div>
-
-        <div class="car-card" data-reveal style="border-radius: 12px; overflow: hidden; background: #faf8f4; border: 1px solid #ece7df;">
-          <div style="height: 320px; position: relative; overflow: hidden;">
-            <img src="assets/voce-ou-sua-empresa.webp" width="640" height="599" loading="lazy" decoding="async" alt="Imóvel residencial ou comercial em Araçatuba-SP" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
-          </div>
-          <div style="padding: 22px 24px;">
-            <div style="font-size: 19px; font-weight: 600; letter-spacing: -0.2px; color: #C4101B">Você ou sua empresa</div>
-            <div style="font-size: 14px; color: #6b6660; margin-top: 4px;">Residencial e comercial</div>
-          </div>
-        </div>
-
       </div>
       <div data-reveal style="text-align: center; margin-top: 48px;">
         <a class="car-btn car-btn-primary" href="https://wa.me/5518997715724?text=Ol%C3%A1%20Silvana!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20im%C3%B3veis%20dispon%C3%ADveis." target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; background: #c4101b; color: #fff; text-decoration: none; padding: 16px 30px; border-radius: 999px; font-size: 15px; font-weight: 600; box-shadow: 0 12px 30px -10px rgba(196,16,27,0.5);">
@@ -584,11 +621,13 @@
     revealEls.forEach(function (el) { io.observe(el); });
   }
 
-  // Carrossel de depoimentos: 5 avaliações reais, sem repetição — por isso é um
-  // carrossel simples que anda um card por vez e para nas pontas (sem loop
-  // infinito, que só faz sentido com uma lista de cards repetida).
-  var track = document.getElementById("reviewsTrack");
-  if (track) {
+  // Carrosséis de depoimentos e de imóveis: listas curtas e sem repetição — por
+  // isso é um carrossel simples que anda um card por vez e para nas pontas (sem
+  // loop infinito, que só faz sentido com uma lista de cards repetida).
+  function initCarousel(trackId, prevId, nextId) {
+    var track = document.getElementById(trackId);
+    if (!track) return;
+
     var raf = null;
     var isAnimating = false;
     // Guarda o destino pretendido separado do scrollLeft ao vivo: se o usuário
@@ -626,11 +665,14 @@
       animateTo(targetLeft + dir * cardStep());
     }
 
-    var prevBtn = document.getElementById("reviewsPrev");
-    var nextBtn = document.getElementById("reviewsNext");
+    var prevBtn = document.getElementById(prevId);
+    var nextBtn = document.getElementById(nextId);
     if (prevBtn) prevBtn.addEventListener("click", function () { move(-1); });
     if (nextBtn) nextBtn.addEventListener("click", function () { move(1); });
   }
+
+  initCarousel("reviewsTrack", "reviewsPrev", "reviewsNext");
+  initCarousel("imoveisTrack", "imoveisPrev", "imoveisNext");
 })();
 </script>
 
