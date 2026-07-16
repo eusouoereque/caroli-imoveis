@@ -90,9 +90,10 @@
        Medidas em vw, e não em %, porque padding em % se resolve contra a largura do
        elemento pai, não da tela. */
     .car-rail { margin: 0 -32px !important; gap: 16px; scroll-snap-type: x mandatory; padding-left: 10vw; padding-right: 10vw; }
-    /* scroll-snap-stop: always obriga a rolagem a parar em cada card. Sem ele, o
-       "x mandatory" só escolhe onde encaixar depois que o impulso do dedo acaba, e
-       um arrasto mais forte voa vários cards de uma vez. */
+    /* Encaixe: rede de segurança, não o mecanismo principal. Quem garante um card
+       por gesto é o initCarousel() no script — o snap-stop só limita a inércia
+       depois que o dedo solta, e não o arrasto em si. Isto aqui é o que sobra se o
+       JS não rodar. */
     .car-rcard { flex: 0 0 80vw !important; width: 80vw !important; scroll-snap-align: center; scroll-snap-stop: always; }
     .car-arrow { display: none !important; }
   }
@@ -636,9 +637,19 @@
     // do movimento — senão cliques rápidos em sequência quase não avançam.
     var targetLeft = track.scrollLeft;
 
+    // Distância de um card ao próximo (largura + gap), medida em vez de calculada:
+    // o gap muda entre desktop (22px) e mobile (16px), e a largura do card também.
     function cardStep() {
-      var c = track.querySelector("[data-card]");
-      return c ? (c.getBoundingClientRect().width + 22) : 382;
+      var cs = track.querySelectorAll("[data-card]");
+      if (cs.length > 1) return cs[1].offsetLeft - cs[0].offsetLeft;
+      return cs.length ? cs[0].getBoundingClientRect().width : 382;
+    }
+    function totalCards() {
+      return track.querySelectorAll("[data-card]").length;
+    }
+    function indiceAtual() {
+      var s = cardStep();
+      return s ? Math.round(track.scrollLeft / s) : 0;
     }
     function maxScroll() {
       return track.scrollWidth - track.clientWidth;
@@ -654,7 +665,7 @@
         var p = Math.min(1, (now - t0) / dur);
         track.scrollTo({ left: Math.round(start + dist * ease(p)), behavior: "instant" });
         if (p < 1) { raf = requestAnimationFrame(step); }
-        else { isAnimating = false; }
+        else { isAnimating = false; track.style.scrollSnapType = ""; }
       }
       raf = requestAnimationFrame(step);
     }
@@ -669,6 +680,45 @@
     var nextBtn = document.getElementById(nextId);
     if (prevBtn) prevBtn.addEventListener("click", function () { move(-1); });
     if (nextBtn) nextBtn.addEventListener("click", function () { move(1); });
+
+    // Um card por gesto no toque.
+    //
+    // O scroll-snap-stop:always do CSS só governa a inércia, depois que o dedo
+    // solta. Enquanto o dedo está na tela, a rolagem nativa o segue 1:1 e nada a
+    // limita — num arrasto longo o trilho já atravessou vários cards antes de a
+    // inércia começar, e o encaixe só escolhe o ponto mais próximo de onde o dedo
+    // largou. Por isso o destino aqui sai da DIREÇÃO do gesto e do índice de onde
+    // ele começou, e não da distância que o trilho chegou a percorrer.
+    var LIMIAR_GESTO = 40; // quanto o dedo precisa andar para valer como troca de card
+    var toqueX = null;
+    var indiceAoTocar = 0;
+
+    function assentar(passo) {
+      var alvo = Math.max(0, Math.min(totalCards() - 1, indiceAoTocar + passo));
+      animateTo(alvo * cardStep());
+    }
+
+    track.addEventListener("touchstart", function (e) {
+      if (e.touches.length !== 1) { toqueX = null; return; }
+      toqueX = e.touches[0].clientX;
+      indiceAoTocar = indiceAtual();
+      // Desliga o encaixe do CSS durante o gesto para ele não disputar o destino
+      // com a animação; animateTo religa quando termina.
+      track.style.scrollSnapType = "none";
+    }, { passive: true });
+
+    track.addEventListener("touchend", function (e) {
+      if (toqueX === null) return;
+      var dx = e.changedTouches[0].clientX - toqueX;
+      toqueX = null;
+      assentar(dx <= -LIMIAR_GESTO ? 1 : (dx >= LIMIAR_GESTO ? -1 : 0));
+    }, { passive: true });
+
+    track.addEventListener("touchcancel", function () {
+      if (toqueX === null) return;
+      toqueX = null;
+      assentar(0);
+    }, { passive: true });
   }
 
   initCarousel("reviewsTrack", "reviewsPrev", "reviewsNext");
