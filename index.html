@@ -584,11 +584,13 @@
     revealEls.forEach(function (el) { io.observe(el); });
   }
 
-  // Carrossel de depoimentos: 5 avaliações reais, sem repetição — por isso é um
-  // carrossel simples que anda um card por vez e para nas pontas (sem loop
-  // infinito, que só faz sentido com uma lista de cards repetida).
-  var track = document.getElementById("reviewsTrack");
-  if (track) {
+  // Carrosséis de depoimentos e de imóveis: listas curtas e sem repetição — por
+  // isso é um carrossel simples que anda um card por vez e para nas pontas (sem
+  // loop infinito, que só faz sentido com uma lista de cards repetida).
+  function initCarousel(trackId, prevId, nextId) {
+    var track = document.getElementById(trackId);
+    if (!track) return;
+
     var raf = null;
     var isAnimating = false;
     // Guarda o destino pretendido separado do scrollLeft ao vivo: se o usuário
@@ -626,11 +628,13 @@
       animateTo(targetLeft + dir * cardStep());
     }
 
-    var prevBtn = document.getElementById("reviewsPrev");
-    var nextBtn = document.getElementById("reviewsNext");
+    var prevBtn = document.getElementById(prevId);
+    var nextBtn = document.getElementById(nextId);
     if (prevBtn) prevBtn.addEventListener("click", function () { move(-1); });
     if (nextBtn) nextBtn.addEventListener("click", function () { move(1); });
   }
+
+  initCarousel("reviewsTrack", "reviewsPrev", "reviewsNext");
 })();
 </script>
 
